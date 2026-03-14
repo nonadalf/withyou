@@ -292,3 +292,18 @@ cursor:pointer;
 font-size:var(--text-sm);
 
 }
+@media (max-width:600px){
+
+header .rightSide button span{
+display:none;
+}
+
+header button{
+padding:var(--space-xs);
+}
+
+header .midl h1{
+font-size:var(--text-lg);
+}
+
+}
