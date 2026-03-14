@@ -1,25 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Bpmf+Huninn&family=Shadows+Into+Light+Two&display=swap");
 
 *{
-  padding:0;
-  margin:0;
-  box-sizing:border-box;
+padding:0;
+margin:0;
+box-sizing:border-box;
 }
 
 :root{
 
-/* الألوان */
+/* colors */
+
 --main-bg-color:#fff5f7;
 --main-text-color:#2d1f24;
 --second-color:#e8a0b0;
 
 --main-border:2px solid #707070;
 
-/* الخطوط */
+/* fonts */
+
 --main-font-family:"Bpmf Huninn", sans-serif;
 --second-font-family:"Shadows Into Light Two", cursive;
 
-/* النصوص */
+/* text */
+
 --text-xs:12px;
 --text-sm:14px;
 --text-md:16px;
@@ -27,220 +30,265 @@
 --text-xl:24px;
 --text-xxl:32px;
 
-/* الأيقونات */
---icon-xs:12px;
---icon-sm:16px;
---icon-md:20px;
---icon-lg:24px;
---icon-xl:32px;
+/* spacing */
 
-/* المسافات */
 --space-xs:4px;
 --space-sm:8px;
 --space-md:16px;
 --space-lg:24px;
 --space-xl:32px;
 
-/* الحواف */
+/* radius */
+
 --radius-sm:4px;
 --radius-md:8px;
 --radius-lg:16px;
 
-/* الأزرار */
---button-sm:32px;
+/* button size */
+
 --button-md:40px;
---button-lg:48px;
 
 }
-
-/* =========================
-   body
-========================= */
+hr{
+    margin: 1em 0;
+}
+/* body */
 
 body{
-  background-color:var(--main-bg-color);
-  color:var(--main-text-color);
-  width:100%;
-  min-height:100vh;
-  font-family:var(--main-font-family);
+background:var(--main-bg-color);
+color:var(--main-text-color);
+font-family:var(--main-font-family);
+min-height:100vh;
 }
 
-/* =========================
-   header
-========================= */
+/* header */
 
 header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:var(--space-md);
+display:flex;
+align-items:center;
+padding:var(--space-md);
 }
 
 header .midl{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+header .rightSide{
+margin-left:auto;
 }
 
 header .midl h1{
-  font-size:var(--text-xl);
-}
-
-header .leftSide,
-header .rightSide{
-  display:flex;
-  align-items:center;
-  width:100%;
-}
-
-header .rightSide{
-  justify-content:end;
+font-size:var(--text-xl);
+letter-spacing:1px;
 }
 
 header button{
-  border:var(--main-border);
-  border-radius:var(--radius-md);
-  padding:var(--space-sm) var(--space-md);
-  background-color:var(--main-bg-color);
-  color:var(--main-text-color);
-  font-size:var(--text-md);
+
+border:var(--main-border);
+border-radius:var(--radius-md);
+
+padding:var(--space-xs) var(--space-md);
+
+background:transparent;
+
+font-size:var(--text-md);
+
+cursor:pointer;
+
+transition:.2s;
 }
 
-/* =========================
-   main
-========================= */
+header button:hover{
+
+background:var(--second-color);
+color:white;
+
+}
+
+/* main */
 
 main{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  font-family:var(--second-font-family);
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+font-family:var(--second-font-family);
 }
 
-/* زر الفلتر */
+/* filter button */
 
-main .filterBtn{
-  border:var(--main-border);
-  border-radius:var(--radius-md);
-  background-color:var(--main-bg-color);
-  color:var(--main-text-color);
+.filterBtn{
 
-  position:fixed;
-  bottom:var(--space-lg);
-  left:var(--space-lg);
+border:var(--main-border);
+border-radius:var(--radius-md);
 
-  padding:var(--space-md);
-  cursor:pointer;
+background:var(--main-bg-color);
+
+position:fixed;
+
+bottom:var(--space-lg);
+left:var(--space-lg);
+
+padding:var(--space-md);
+
+cursor:pointer;
+
 }
 
-/* السؤال */
+/* main question */
 
-main .mainQ{
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:var(--space-lg) 0;
+.mainQ{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+padding:var(--space-lg);
+
+text-align:center;
+
 }
 
-main .mainQ h1{
-  font-size:var(--text-xl);
-  text-align:center;
+.mainQ h1{
+
+font-size:var(--text-xl);
+
 }
 
-/* الرسائل */
+/* posts */
 
-main .mainA{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:var(--space-md);
+.mainA{
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:var(--space-md);
+
 }
 
-/* البطاقة */
+/* card */
 
-main .mainA .boxA{
-  width:90%;
-  border-radius:var(--radius-md);
-  border:var(--main-border);
-  padding:var(--space-md);
+.boxA{
+
+width:90%;
+
+border:var(--main-border);
+
+border-radius:var(--radius-md);
+
+padding:var(--space-md);
+
 }
 
-/* header البطاقة */
+/* card header */
 
 .boxA .header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
 }
 
-.boxA .header .leftSide{
-  display:flex;
-  align-items:center;
-  gap:var(--space-sm);
+.boxA .leftSide{
+
+display:flex;
+
+align-items:center;
+
+gap:var(--space-sm);
+
 }
 
 .boxA .img{
-  display:flex;
-  align-items:center;
-  justify-content:center;
 
-  width:var(--button-md);
-  height:var(--button-md);
+width:var(--button-md);
 
-  border-radius:50%;
-  border:var(--main-border);
+height:var(--button-md);
+
+border-radius:50%;
+
+border:var(--main-border);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
 }
 
-.boxA .infoUser h1{
-  font-size:var(--text-md);
+.infoUser h1{
+
+font-size:var(--text-md);
+
 }
 
-.boxA .infoUser span{
-  font-size:var(--text-xs);
+.infoUser span{
+
+font-size:var(--text-xs);
+
 }
 
-/* زر أعلى البطاقة */
-
-.boxA .header button{
-  border:var(--main-border);
-  border-radius:var(--radius-md);
-  padding:var(--space-sm);
-  background:var(--main-bg-color);
-}
-
-/* جسم الرسالة */
+/* card body */
 
 .boxA .body{
-  line-height:1.6;
-  font-size:var(--text-sm);
-  padding:var(--space-sm) 0;
+
+line-height:1.6;
+
+font-size:var(--text-sm);
+
+padding:var(--space-sm) 0;
+
 }
 
-/* الفوتر */
+/* footer */
 
 .boxA .footer{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:var(--space-sm);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:var(--space-sm);
+
 }
 
 .boxA .footer p{
-  font-size:var(--text-sm);
+
+font-size:var(--text-sm);
+
 }
 
-/* زر الإعجاب */
+/* like button */
 
 .boxA .footer button{
-  background:#ff2353;
-  color:white;
-  border:none;
-  border-radius:var(--radius-md);
-  padding:var(--space-sm) var(--space-md);
-  cursor:pointer;
-  font-size:var(--text-sm);
+
+background:#ff2353;
+
+color:white;
+
+border:none;
+
+border-radius:var(--radius-md);
+
+padding:var(--space-sm) var(--space-md);
+
+cursor:pointer;
+
+font-size:var(--text-sm);
+
 }
